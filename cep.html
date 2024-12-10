@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Buscador de CEP - Paraná</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="cep.css">
+
+    <!-- Adicionando JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container-header">
+        <header>
+            <h1 id="h1-title">Buscador de CEP's do Paraná</h1>
+        </header>
+    </div>
+    <h2>Buscar Endereço pelo CEP</h2>
+    <form id="busca-cep">
+        <label>*CEP:
+            <input name="cep" type="text" id="cep" size="10" maxlength="9" />
+        </label><br/>
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" readonly/>
+        </label><br/>
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" readonly/>
+        </label><br/>
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" readonly/>
+        </label><br/>
+        <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" readonly />
+        </label><br/>
+        <button type="button" id="buscarEndereco">Buscar Endereço</button>
+    </form>
+    <div id="resultado-endereco"></div>
+    <h2>Buscar CEP pelo Endereço</h2>
+    <form id="busca-rua">
+        <label>*Estado:
+            <input name="uf-busca" type="text" id="uf-busca" size="2" />
+        </label><br/>
+        <label>*Cidade:
+            <input name="cidade-busca" type="text" id="cidade-busca" size="40" />
+        </label><br/>
+        <label>*Rua:
+            <input name="rua-busca" type="text" id="rua-busca" size="60" />
+        </label><br/>
+        <label>Bairro:
+            <input name="bairro-busca" type="text" id="bairro-busca" size="40" />
+        </label><br/> 
+        <label>CEP:
+            <input name="cep-busca" type="text" id="cep2" size="40" readonly/>
+        </label><br/>
+        <p style="color: red;"><b>Preencha os campos obrigatórios marcados por * <br>
+        Por gentileza, pesquise o "Estado" pelo seu UF.</b></p>
+        <button type="button" id="buscarCep">Buscar CEP</button>
+    </form>
+    <div id="resultado-cep"></div>
+</body>
+<script src="cep.js"></script>
+</html>
